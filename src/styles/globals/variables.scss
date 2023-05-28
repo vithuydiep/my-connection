@@ -1,0 +1,49 @@
+$fontFamily: 'Poppins', sans-serif;
+
+
+:root {
+	/* font Variables */
+	--fontThin: 100;
+	--fontExtraLight: 200;
+	--fontLight: 300;
+	--fontRegular: 400;
+	--fontMedium: 500;
+	--fontSemiBold: 600;
+	--fontBold: 700;
+	--fontExtraBold: 800;
+	--fontBlack: 900;
+
+	/* Header Variables */
+	--headerBgColor: #ebebeb;
+	--hamMenuBgColor: #ffffff;
+	--headerHeight: 100px;
+
+	/* General Variables */
+	--textColor: #000;
+	--textLightColor: #fff;
+	--backgroundLightColor: #ffffff;
+	--backgroundGrayColor: #f5f6f9;
+	--borderColor: #d9d7d7;
+	--activeColor: #fdf0db;
+
+	/* Form Component Variable */
+	--inputLabelColor: #000000;
+	--inputValueColor: #000000;
+	--inputWrapBgColor: #fafafa;
+	--inputWrapBorderColor: #dadada;
+	--otpBackgroundColor: #efefef;
+	--formErrorColor: #DE3737;
+	--formAccordionBlue: #0069aa;
+
+    /* Button Styles */
+   --buttonBgDarkColor: #23539A;
+   --buttonTextDarkColor: #000000;
+   --buttonBgLightColor: #FFFFFF;
+   --buttonTextLightColor: #FFFFFF;
+   --buttonBorderRadius: 30px;
+   --buttonArrowBgColor: #3FE9CA;
+   --buttonGrayColor: #E0E0E0;
+
+	/* Loan Item Variables */
+	--loanItemDarkBackground: #dbdbdb;
+}
