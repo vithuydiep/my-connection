@@ -1,3 +1,4 @@
+import { SelectChangeEvent } from '@mui/material';
 import { FieldConfig } from 'formik';
 import { ChangeEvent, FocusEvent } from 'react';
 
@@ -15,6 +16,7 @@ export interface FormControlProps extends FieldConfig {
   onSelect?: (value: string) => void;
   placeholder?: string;
   onChange?: (e: ChangeEvent<any>) => void;
+  onChangeSelect?:(event: SelectChangeEvent<any>) => void;
   onAccept?: (value: string) => void;
   onBlur?: (e: FocusEvent<any>) => void;
   autoFocus?: boolean;

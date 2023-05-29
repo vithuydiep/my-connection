@@ -39,6 +39,7 @@ export const useCreateConnectionStyle = createUseStyles(
       width: '100%',
       backgroundColor: '#fff',
       padding: '20px 40px',
+      margin: '10px 0',
       borderRadius: 7,
       textAlign: 'left',
       '& > p': {

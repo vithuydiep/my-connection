@@ -22,9 +22,9 @@ function FormInput(props: FormControlProps) {
         toolTipString,
         ...rest
     } = props;
-    const { formInputParentWrp, formInputWrp } = useInputFormStyle();
+    const {formInputWrp } = useInputFormStyle();
     return (
-        <div className={formInputParentWrp}>
+        <div>
             <div className={formInputWrp}>
                 <label htmlFor={name}>
                     {label} {isRequire && <span>*</span>}
@@ -50,7 +50,7 @@ function FormInput(props: FormControlProps) {
                         );
                     }}
                 </Field>
-                <div>{description}</div>
+                <p>{description}</p>
 
             </div>
             {/* <ErrorMessage

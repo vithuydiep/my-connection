@@ -3,76 +3,75 @@
 
 body,
 html {
-	font-family: $fontFamily;
-	font-weight: var(--fontRegular);
-	overflow-x: hidden;
+  font-family: $fontFamily;
+  font-weight: var(--fontRegular);
+  overflow-x: hidden;
 }
 textarea {
-	font-family: $fontFamily;
+  font-family: $fontFamily;
 }
 button:focus,
 input:focus,
 textarea:focus,
 select:focus,
 section:active {
-	outline: none;
+  outline: none;
 }
 
 $justifyContent: (
-	SpaceBetween: space-between,
-	FlexEnd: flex-end,
-	Center: center,
-	SpaceAround: space-around,
+  SpaceBetween: space-between,
+  FlexEnd: flex-end,
+  Center: center,
+  SpaceAround: space-around,
 );
 .dFlex {
-	display: flex;
-	align-items: center;
-	@each $content, $value in $justifyContent {
-		&.justifyContent#{$content} {
-			justify-content: $value;
-		}
-	}
-	&.directionColumn {
-		flex-direction: column;
-	}
+  display: flex;
+  align-items: center;
+  @each $content, $value in $justifyContent {
+    &.justifyContent#{$content} {
+      justify-content: $value;
+    }
+  }
+  &.directionColumn {
+    flex-direction: column;
+  }
 }
 
-table th:first-child{
-	border-radius:5px 0 0 5px;
-}
-  
-table th:last-child{
-	border-radius:0 5px 5px 0;
+table th:first-child {
+  border-radius: 5px 0 0 5px;
 }
 
+table th:last-child {
+  border-radius: 0 5px 5px 0;
+}
 
 tr td {
-	padding: 10px 20px;
-	border-bottom: solid 1px #ccc;
-	text-align: left;
+  padding: 10px 20px;
+  border-bottom: solid 1px #ccc;
+  text-align: left;
 }
 
-.success{
-	color: greenyellow;
+.success {
+  color: greenyellow;
 }
 
-.fail{
-	color: red;
+.fail {
+  color: red;
 }
 
-.textPrimary{
-	color: rgb(64, 94, 130);
+.textPrimary {
+  color: rgb(64, 94, 130);
 }
 
-button:hover{
-	cursor: pointer;
+button:hover {
+  cursor: pointer;
 }
 
 .MuiPagination-root {
-	button {
-		&.Mui-selected{
-			background-color:#405e82;
-			color: #fff
-		}
-   }
+  button {
+    &.Mui-selected {
+      background-color: #405e82;
+      color: #fff;
+    }
   }
+}

@@ -1,4 +1,6 @@
 import { FocusEvent } from 'react';
+import { generate } from 'randomized-string'
+
 
 export const scrollIntoView = (
   e:
@@ -10,3 +12,10 @@ export const scrollIntoView = (
     block: 'center',
     inline: 'start',
   });
+
+
+  export const randomFromString = (input: string, length: number): string => {
+    const rand = generate(length)
+    return `${input}-${rand}`
+  }
+  
