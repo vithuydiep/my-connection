@@ -9,6 +9,7 @@ import { BackIcon } from '../../assets/svgs';
 import useCreateConnectionStyle from './CreateConnectionPageStyles';
 import CreateConnection from '../../Components/CreationConnection/CreationConnection';
 
+
 interface DataProps {
   id: number;
   name: string;
@@ -42,7 +43,6 @@ function ConnectionsPage() {
     container,
     item,
     filterWrapper,
-    groupButton,
   } = useCreateConnectionStyle();
   const [type, setType] = useState({
     all: true,
@@ -86,68 +86,60 @@ function ConnectionsPage() {
         <div className={title}>Create Connection</div>
 
         {step === 'first' ? (
-          <div className={content}>
-            <p>Select the type of source you want to connect</p>
-            <div className={contentWrapper}>
-              <div className={filterWrapper}>
-                <FilterItem
-                  checked={type.all}
-                  handleChange={handleChange}
-                  label={`All (${initData.length})`}
-                  ariaLabel={'all'}
-                />
-                <FilterItem
-                  checked={type.database}
-                  handleChange={handleChange}
-                  label={`Database (${calculateLength('database')})`}
-                  ariaLabel='database'
-                />
-                <FilterItem
-                  checked={type.storage}
-                  handleChange={handleChange}
-                  label={`File Storage (${calculateLength('storage')})`}
-                  ariaLabel='storage'
-                />
-              </div>
-              <div className={container}>
-                {data.map((iter: DataProps) => (
-                  <button
-                    className={item}
-                    key={iter.id}
-                    onClick={() => {
-                      setStep('second');
-                      setChosenType(iter.name);
-                    }}
-                  >
-                    <img src={iter.image} alt='' />
-                    <p>{iter.name}</p>
-                  </button>
-                ))}
+          <>
+            <div className={content}>
+              <p>Select the type of source you want to connect</p>
+              <div className={contentWrapper}>
+                <div className={filterWrapper}>
+                  <FilterItem
+                    checked={type.all}
+                    handleChange={handleChange}
+                    label={`All (${initData.length})`}
+                    ariaLabel={'all'}
+                  />
+                  <FilterItem
+                    checked={type.database}
+                    handleChange={handleChange}
+                    label={`Database (${calculateLength('database')})`}
+                    ariaLabel='database'
+                  />
+                  <FilterItem
+                    checked={type.storage}
+                    handleChange={handleChange}
+                    label={`File Storage (${calculateLength('storage')})`}
+                    ariaLabel='storage'
+                  />
+                </div>
+                <div className={container}>
+                  {data.map((iter: DataProps) => (
+                    <button
+                      className={item}
+                      key={iter.id}
+                      onClick={() => {
+                        setStep('second');
+                        setChosenType(iter.name);
+                      }}
+                    >
+                      <img src={iter.image} alt='' />
+                      <p>{iter.name}</p>
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+            <button
+              onClick={() => {
+                navigate(ROUTE_PATHS.connectionPage);
+              }}
+              className='backBtn'
+            >
+              <BackIcon color='#405e82' />
+              <p>Back</p>
+            </button>
+          </>
         ) : (
-          <CreateConnection type={chosenType} />
+          <CreateConnection type={chosenType} setStep={setStep} />
         )}
-        <div>
-          <button
-            onClick={() => {
-              if (step === 'second') {
-                return setStep('first');
-              }
-              navigate(ROUTE_PATHS.connectionPage);
-            }}
-          >
-            <BackIcon color='#405e82' />
-            <p>Back</p>
-          </button>
-          {step === 'second' && (
-            <div className={groupButton}>
-              <button>Cancel</button>
-              <button>Create Connection</button>
-            </div>
-          )}
-        </div>
       </div>
     </>
   );

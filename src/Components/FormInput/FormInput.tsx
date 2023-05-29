@@ -13,14 +13,12 @@ function FormInput(props: FormControlProps) {
         name,
         type,
         description,
-        isNumber,
         onChange,
         placeholder,
         isRequire,
         disabled,
         isOptional,
         toolTipString,
-        ...rest
     } = props;
     const {formInputWrp } = useInputFormStyle();
     return (
@@ -33,7 +31,7 @@ function FormInput(props: FormControlProps) {
                 </label>
                 <Field name={name}>
                     {(fieldProps: FieldProps) => {
-                        const { field, form, meta } = fieldProps;
+                        const { field } = fieldProps;
                         return (
                             <input
                                 type={type ? type : 'text'}
@@ -53,10 +51,6 @@ function FormInput(props: FormControlProps) {
                 <p>{description}</p>
 
             </div>
-            {/* <ErrorMessage
-                        render={msg => <div className={formErrMsg}>{msg}</div>}
-                        name={name}
-                    /> */}
         </div>
     );
 }

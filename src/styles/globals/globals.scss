@@ -75,3 +75,19 @@ button:hover {
     }
   }
 }
+
+.backBtn{
+  border: none;
+  display: flex;
+  color: rgb(64, 94, 130);
+  background-color: transparent;
+  align-items: center;
+  & p {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}
+
+.disable {
+  cursor: no-drop !important;
+}

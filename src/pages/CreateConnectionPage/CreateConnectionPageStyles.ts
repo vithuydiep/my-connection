@@ -8,23 +8,6 @@ export const useCreateConnectionStyle = createUseStyles(
       flexDirection: 'column',
       alignItems: 'flex-start',
       padding: '10px 50px',
-      '& > div:last-of-type': {
-        width:'100%',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        '& > button': {
-          display: 'flex',
-          alignItems: 'center',
-          border: 'none',
-          backgroundColor: 'transparent',
-          '& > p': {
-            paddingLeft: 10,
-            fontSize: 16,
-            color: '#405e82',
-          },
-        },
-      },
     },
     slash: {
       color: '#ccc',
@@ -83,25 +66,6 @@ export const useCreateConnectionStyle = createUseStyles(
         objectFit: 'contain',
       },
     },
-    groupButton:{
-      margin:'10px 0',
-      '& button':{
-        border: 'none',
-        padding: '10px 20px',
-        borderRadius: 5,
-        fontWeight: 600
-      },
-      '& button:first-of-type':{
-        backgroundColor: '#ccc',
-        color:'#818181',
-        width: 150
-      },
-      '& button:last-of-type':{
-        backgroundColor: '#405e82',
-        color: '#fff',
-        marginLeft: 10
-      }
-    }
   })
 );
 

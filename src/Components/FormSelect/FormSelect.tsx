@@ -17,8 +17,7 @@ function FormSelect(props: FormControlProps) {
     onChangeSelect,
     disabled,
     isOptional,
-	toolTipString,
-    ...rest
+    toolTipString,
   } = props;
   const { formInputWrp, formErrMsg, selectDisabledWrap } = useInputFormStyle();
 
@@ -27,11 +26,11 @@ function FormSelect(props: FormControlProps) {
       <div className={clsx(formInputWrp, disabled && selectDisabledWrap)}>
         <label htmlFor={name}>
           {label} {isOptional && <i>- optional</i>}
-		  {toolTipString && <FontAwesomeIcon icon={faCircleInfo} data-tooltip-id="info" data-tooltip-content={toolTipString} size='sm' />}
+          {toolTipString && <FontAwesomeIcon icon={faCircleInfo} data-tooltip-id="info" data-tooltip-content={toolTipString} size='sm' />}
         </label>
         <Field name={name}>
           {(fieldProps: FieldProps) => {
-            const { field, form, meta } = fieldProps;
+            const { field } = fieldProps;
             return (
               <Select
                 id={name}

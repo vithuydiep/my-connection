@@ -177,7 +177,7 @@ function HomePage() {
                   {data.map((item) => (
                     <tr key={item.id}>
                       <td>
-                        <input type='radio' />
+                        <input type='radio' name='check' />
                       </td>
                       <td className='textPrimary'>{item.connectionName}</td>
                       <td>{item.connectionType}</td>

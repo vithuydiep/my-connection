@@ -60,7 +60,7 @@ export const useCreationConnectionStyle = createUseStyles(
         width: '100%',
         textAlign: 'right',
         '& > button': {
-          backgroundColor: 'rgb(251,227, 142)',
+          backgroundColor: 'rgb(221 204 144)',
           border: 'none',
           color: '#fff',
           padding: '10px 20px',
@@ -109,6 +109,29 @@ export const useCreationConnectionStyle = createUseStyles(
         padding: '20px 10px',
       },
     },
+    groupButton:{
+      margin:'10px 0',
+      '& button':{
+        border: 'none',
+        padding: '10px 20px',
+        borderRadius: 5,
+        fontWeight: 600
+      },
+      '& button:first-of-type':{
+        backgroundColor: '#ccc',
+        color:'#818181',
+        width: 150
+      },
+      '& button:last-of-type':{
+        backgroundColor: '#405e82',
+        color: '#fff',
+        marginLeft: 10
+      }
+    },
+    wrapBtn:{
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
   })
 );
 
