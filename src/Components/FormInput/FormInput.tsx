@@ -20,7 +20,7 @@ function FormInput(props: FormControlProps) {
         isOptional,
         toolTipString,
     } = props;
-    const {formInputWrp } = useInputFormStyle();
+    const { formInputWrp } = useInputFormStyle();
     return (
         <div>
             <div className={formInputWrp}>
@@ -34,6 +34,7 @@ function FormInput(props: FormControlProps) {
                         const { field } = fieldProps;
                         return (
                             <input
+                                data-testid={name}
                                 type={type ? type : 'text'}
                                 placeholder={placeholder || ''}
                                 id={name}
