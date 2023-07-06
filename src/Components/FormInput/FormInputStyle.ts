@@ -39,6 +39,9 @@ export const useInputFormStyle = createUseStyles(
         fontSize: 11,
         margin: '5px 0'
       },
+      '& p:first-of-type':{
+        color: 'red'
+      },
       '& > div':{
         width: 200,
         height: 30

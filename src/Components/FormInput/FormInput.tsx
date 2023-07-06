@@ -19,6 +19,7 @@ function FormInput(props: FormControlProps) {
         disabled,
         isOptional,
         toolTipString,
+        error
     } = props;
     const { formInputWrp } = useInputFormStyle();
     return (
@@ -49,6 +50,7 @@ function FormInput(props: FormControlProps) {
                         );
                     }}
                 </Field>
+                {error && <p>{error}</p>}
                 <p>{description}</p>
 
             </div>

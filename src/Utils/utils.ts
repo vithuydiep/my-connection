@@ -19,3 +19,6 @@ export const scrollIntoView = (
     return `${input}-${rand}`
   }
   
+  export const formatUsername = (username : string) : string => {
+    return `@${username}`
+  }

@@ -7,10 +7,12 @@ interface routePath {
   feature3: string;
   feature4: string;
   administration: string;
+  loginPage: string;
 }
 
 export const ROUTE_PATHS: routePath = {
-  connectionPage: '/',
+  loginPage: '/',
+  connectionPage: '/connection',
   createConnectionPage: '/new',
   feature2: '/feature2',
   feature3: '/feature3',
